@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AtestadoObito" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fae004b6-4269-4d54-ae54-42037d483f8c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="Nome" class="java.lang.String"/>
+	<parameter name="Cpf" class="java.lang.String"/>
+	<parameter name="Data" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="131" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="180" y="15" width="200" height="50" uuid="9555bda5-8a8f-4041-bef1-c2e282f61580"/>
+				<imageExpression><![CDATA["C:/Users/PC/Documents/admClin-master/WebContent/resources/img/logosigclean.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="81" y="95" width="399" height="30" forecolor="#FFFFFF" backcolor="#807E7E" uuid="ac50715d-5b92-47bd-9428-cdccd5ab7c39"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineColor="#141414"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Atestado De Obito]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="47" width="250" height="20" uuid="fcd686a2-ff50-4f48-ba78-382da5723741"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Declaro que o paciente com o nome :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="256" y="47" width="294" height="20" uuid="9ac0c35a-884c-47c5-8487-341b8d244ba6"/>
+				<textElement>
+					<font size="15" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Nome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="76" width="60" height="21" uuid="686f8921-19d3-4766-918a-549a052402c6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[E CPF :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="77" width="95" height="20" uuid="64d362d8-1a70-4b0c-a1ce-71ccbe380249"/>
+				<textElement>
+					<font size="15" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Cpf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="165" y="74" width="160" height="23" uuid="c0df0f4e-6e95-4dce-9a73-205f68056b34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Chegou a obito no dia :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="330" y="74" width="185" height="23" uuid="381fba9e-eb1a-436b-b448-e9ef2b96c4e0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="15" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Data}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="78" splitType="Stretch">
+			<staticText>
+				<reportElement x="346" y="19" width="199" height="21" uuid="b39046e3-c827-47c8-bf8c-231f376b6c96"/>
+				<textElement textAlignment="Center">
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Carimbo e Assinatura]]></text>
+			</staticText>
+			<textField pattern="EEEE dd,MMMM-yyyy">
+				<reportElement x="0" y="48" width="210" height="30" uuid="5767b766-4ddc-443f-aa40-ab3f0d8ee1de"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="347" y="18" width="200" height="1" uuid="449a5ec8-a803-47f1-82af-dea8deafc326">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
