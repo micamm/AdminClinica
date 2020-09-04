@@ -14,6 +14,7 @@ public class ConsultaDAO extends GenericDAO<Consulta> {
 		super(Consulta.class);
 	}
 	
+	
 	public List<Consulta> buscarConsultaPorPaciente(Paciente paciente) {	   
 		  EntityManager em = JPAResourceBean.getEntityManager();	   
 		  String queryJPQL = "SELECT c FROM Consulta c WHERE c.paciente = :paciente";   
